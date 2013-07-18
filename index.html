@@ -3,12 +3,50 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Agora examples</title>
-		<link rel="stylesheet" href="mediawiki.ui.experimental.css">
+		<link rel="stylesheet" href="mediawiki.ui.vector.css">
+		<script src="libs/jquery.js"></script>
+		<script type="text/javascript">
+		var flavourList = ["default","vector", "experimental"];
+		
+		function changeFlavour(flavourName){
+			if($.inArray(flavourName,flavourList)!=-1)
+				$("link[rel=stylesheet]").attr({href : "mediawiki.ui."+flavourName+".css"});
+		}
+		
+		$(document).ready(function() {
+			// Set flavour via #parameter
+			var hash = window.location.hash.replace('#','');
+			changeFlavour(hash);
+			
+			//Set flavour via drop-down
+			$(".agora-flavor-selector").change(function() {
+				var flavour = $(this).val();
+				changeFlavour(flavour);
+			});
+
+			});
+		</script>
 	</head>
 	<body>
+	<h1>Select Agora flavour</h1>
+		<select class="agora-flavor-selector">
+		  <option value="default">Default</option>
+		  <option value="vector" selected="selected" >Vector</option>
+		  <option value="experimental">Experimental</option>
+		</select>
 	<h1>Buttons</h1>
-	<button class="mw-ui-button mw-ui-primary">Add message</button>
-	<button class="mw-ui-button">Another</button>
-	<button class="mw-ui-button mw-ui-noborder">Another more</button>
+	<h2>Regular buttons</h2>
+		<button class="mw-ui-button mw-ui-primary">Send message</button>
+		<button class="mw-ui-button">Archive</button>
+		<button class="mw-ui-button mw-ui-noborder">More</button>
+		<button class="mw-ui-button mw-ui-constructive">Share</button>
+		<button class="mw-ui-button mw-ui-destructive">Delete</button>
+	
+	<h2>Buttons groups</h2>
+		<div class="mw-ui-button-group">
+			<button class="mw-ui-button mw-ui-primary">Add message</button>
+			<button class="mw-ui-button">Another</button>
+			<button class="mw-ui-button">Another more</button>
+		</div>
 	</body>
 </html>
