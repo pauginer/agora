@@ -34,6 +34,7 @@
 		  <option value="vector" selected="selected" >Vector</option>
 		  <option value="experimental">Experimental</option>
 		</select>
+
 	<h1>Buttons</h1>
 	<h2>Regular buttons</h2>
 		<button class="mw-ui-button mw-ui-primary">Send message</button>
@@ -48,5 +49,26 @@
 			<button class="mw-ui-button">Another</button>
 			<button class="mw-ui-button">Another more</button>
 		</div>
+
+	<h1>Forms</h1>
+
+	<h2>Vertical form</h2>
+	<form class="mw-ui-vform">
+			<div>
+				<label for="name"> Username <span class="mw-ui-flush-right"><a href="#" title="Help">(help me choose)</a></span> </label>
+				<input id="name" class="mw-input loginText" placeholder="Enter your username">
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input id="password" class="mw-input loginPassword" placeholder="Enter a password" type="password">
+			</div>
+			<div>
+				<label for="email"> Email address (optional) </label>
+				<input id="email" class="mw-input loginText" placeholder="Enter your email address" type="email">
+			</div>
+			<div>
+				<input type="submit" class="mw-ui-button mw-ui-big mw-ui-block mw-ui-primary" value="Create your account">
+			</div>
+		</form>
 	</body>
 </html>
