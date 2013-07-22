@@ -222,8 +222,8 @@
   margin: 0;
   width: 100%;
 }
-/* line 34, src/scss/components/default/_forms.scss */
-.mw-ui-vform > div input {
+/* line 36, src/scss/components/default/_forms.scss */
+.mw-ui-vform > div input:not([type=button]):not([type=submit]):not([type=file]) {
   outline: 0;
   border-style: solid;
   border-width: 1px;
@@ -232,11 +232,11 @@
   padding: 0.35em 0 0.35em 0.5em;
 }
 /* line 12, src/scss/mixins/_forms.scss */
-.mw-ui-vform > div input:focus {
+.mw-ui-vform > div input:not([type=button]):not([type=submit]):not([type=file]):focus {
   box-shadow: #4091ed 0px 0px 5px;
   border-color: #4091ed;
 }
-/* line 38, src/scss/components/default/_forms.scss */
+/* line 40, src/scss/components/default/_forms.scss */
 .mw-ui-vform > div label {
   display: block;
   -webkit-box-sizing: border-box;
@@ -252,7 +252,7 @@
 .mw-ui-vform > div label * {
   font-weight: normal;
 }
-/* line 49, src/scss/components/default/_forms.scss */
+/* line 51, src/scss/components/default/_forms.scss */
 .mw-ui-vform > div input[type="checkbox"],
 .mw-ui-vform > div input[type="radio"] {
   display: inline;
@@ -262,7 +262,7 @@
   width: auto;
 }
 
-/* line 65, src/scss/components/default/_forms.scss */
+/* line 67, src/scss/components/default/_forms.scss */
 .mw-ui-input {
   outline: 0;
   border-style: solid;
@@ -277,7 +277,7 @@
   border-color: #4091ed;
 }
 
-/* line 72, src/scss/components/default/_forms.scss */
+/* line 74, src/scss/components/default/_forms.scss */
 .mw-ui-label {
   font-size: 0.9em;
   color: #4a4a4a;
@@ -287,7 +287,7 @@
   font-weight: normal;
 }
 
-/* line 81, src/scss/components/default/_forms.scss */
+/* line 83, src/scss/components/default/_forms.scss */
 .mw-ui-checkbox-label, .mw-ui-radio-label {
   margin-bottom: 0.5em;
   cursor: pointer;
